@@ -16,6 +16,7 @@
 3. Parse Token: This button will parse a JWT token located in your browser's headers and display the parsed data.
 
 # Testing #
+Make sure the backend endpoints and database are both up before running the tests!
 
 To test with [enzyme](https://enzymejs.github.io/enzyme/) run `npm run test`. Make sure to press 'a' when the dialog pops up on your terminal.
 
@@ -26,7 +27,6 @@ npx cypress open
 ``` 
 Then, click on the file called `app.spec.js` to run the tests contained within that file.
 
-the frontend, run `npm run test`. Make sure the backend endpoints and database are both up before running the tests.
 # Coverage #
 
 To check the code coverage of the tests, run:
