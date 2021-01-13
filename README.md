@@ -29,4 +29,4 @@ Then, click on the file called `app.spec.js` to run the tests contained within t
 the frontend, run `npm run test`. Make sure the backend endpoints and database are both up before running the tests.
 # Coverage #
 
-To test the code coverage, run `npm run 
+To test the code coverage, run `npm run test`
