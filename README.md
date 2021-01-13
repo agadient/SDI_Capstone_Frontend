@@ -21,7 +21,7 @@ To test with [enzyme](https://enzymejs.github.io/enzyme/) run `npm run test`. Ma
 
 To test with [cypress](https://www.cypress.io), run the following commands:
 ```
-npm run startnpx cypress open
+npm run start
 npx cypress open
 ``` 
 Then, click on the file called `app.spec.js` to run the tests contained within that file.
