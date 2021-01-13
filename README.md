@@ -20,7 +20,7 @@ Make sure the backend endpoints and database are both up before running the test
 
 To test with [enzyme](https://enzymejs.github.io/enzyme/) run `npm run test`. Make sure to press 'a' when the dialog pops up on your terminal.
 
-To test with [cypress](https://www.cypress.io), run the following commands:
+To test with [cypress](https://www.cypress.io), run the following commands. Running in development mode is important for gather coverage data!
 ```
 npm run start-dev
 npx cypress open
@@ -32,6 +32,5 @@ Then, click on the file called `app.spec.js` to run the tests contained within t
 To check the code coverage of the tests, run the following command. Make sure to run the cypress tests before you run these commands!
 
 ```
-cd cypress
 npx nyc report --text
 ```
