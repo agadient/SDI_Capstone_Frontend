@@ -22,13 +22,16 @@ To test with [enzyme](https://enzymejs.github.io/enzyme/) run `npm run test`. Ma
 
 To test with [cypress](https://www.cypress.io), run the following commands:
 ```
-npm run start
+npm run start-dev
 npx cypress open
 ``` 
 Then, click on the file called `app.spec.js` to run the tests contained within that file.
 
 # Coverage #
 
-To check the code coverage of the tests, run:
+To check the code coverage of the tests, run the following command. Make sure to run the cypress tests before you run these commands!
 
-```CI=true npm test -- --env=jsdom --coverage```
+```
+cd cypress
+npx nyc report --text
+```
