@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button,createMuiTheme, ThemeProvider, CssBaseline, AppBar, Grid, TextField, Typography, TableCell, TableRow, TableBody, Table } from '@material-ui/core';
+import { Button,createMuiTheme, ThemeProvider, CssBaseline, AppBar, Grid, TextField, Typography, TableCell, TableRow, TableBody, Table, Container, Paper, Hidden} from '@material-ui/core';
 
 const theme = createMuiTheme({
   palette: {
@@ -64,47 +64,70 @@ export default function App() {
   };
 
   return (
+    <>
     <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Grid style={{ marginTop: '50px'}} container spacing={5}>
-      <Grid item xs={12}> <AppBar><h1>Sample App</h1></AppBar></Grid>
-        <Grid item xs={12}>  
-        <Typography component="span"> Input data to stick in database:</Typography>
-          <TextField
-          name="sampleData"
-          className="sampleData"
-          type="text"
-          onChange={(event) => handleChange(event)}
-          ></TextField>
-          <Button variant="contained" color="primary" className="sendData" name="SendData" onClick={writeDatabase}>
-            Write data to database
-            </Button>
-        </Grid>
-        <Grid item xs={12}> 
-          <Button variant="contained" color="primary" className="parseJWT" onClick={sendToken}>
-            Parse token
-          </Button>
-        </Grid>
+     <CssBaseline />
+     <Container>
+     <Grid style={{ marginTop: '60px'}} container spacing={5}>
         <Grid item xs={12}>
-            <Button variant="contained" color="primary" className="readData" onClick={readDatabase}>
-            Read data from database
-          </Button>
+          <AppBar><h1>Sample App</h1></AppBar>
         </Grid>
-        <Grid item xs={12}> 
-          <Table variant="outlined" className="display-data-class">
+     </Grid>
+     <Grid container spacing={3} direction="row" justify="center" alignItems="center">
+        <Grid container spacing={3} direction="column" justify="center" alignItems="left" item xs={4}>
+          <Grid item xs={12}>
+            <Typography> Input data to database:</Typography>
+          </Grid>
+          
+          <Grid item xs={12}>
+            <TextField
+            name="sampleData"
+            className="sampleData"
+            type="text"
+            onChange={(event) => handleChange(event)}
+            >
+            </TextField>
+          </Grid>
+          <Grid item xs={12}>
+            <Button variant="contained" color="primary" className="sendData" name="SendData" onClick={writeDatabase}>
+              Write data to database
+            </Button>
+          </Grid>
+        </Grid>
+        <Grid container spacing={3} direction="column" justify="center" alignItems="left" item xs={4}>
+          <Grid item xs={12}></Grid>
+          <Grid item xs={12}></Grid>
+          <Grid item xs={12}>
+            <Button variant="contained" color="primary" className="readData" onClick={readDatabase}>
+               Read data from database
+            </Button>
+          </Grid>  
+        </Grid>
+        <Grid container spacing={3} direction="column" justify="center" alignItems="left" item xs={4}>
+           <Grid item xs={12}></Grid>
+          <Grid item xs={12}></Grid>
+          <Grid item xs={12}>
+            <Button variant="contained" color="primary" className="parseJWT" onClick={sendToken}>
+              Parse token
+            </Button>  
+          </Grid>
+        </Grid>
+     </Grid>     
+     <Grid container spacing={3} direction="row" justify="center" alignItems="center">
+       <Grid item xs={12}>
+       <Table variant="outlined" className="display-data-class">
             <TableBody>
               {displayData}
             </TableBody>
-          </Table>
-        </Grid>
-    </Grid>
-   
-      <div>
-        {" "}
-        {" "}
-      </div>
+          </Table>  
+       </Grid>  
+     </Grid>
+     </Container>
 
-   
     </ThemeProvider>
+    </>
   );
 }
+        
+    
+   
