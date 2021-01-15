@@ -1,4 +1,4 @@
-# Installation and Setup
+# Installation and Setup from Git Hub
 1. Press the green button that says "Use this template"
    ![Green Button](https://i.imgur.com/vRuyLNh.png)
 2. Name your repo
@@ -10,6 +10,14 @@
 8. `npm start`
 9. Before interacting with the frontend, make sure the backend is up an running!! That means the express or spring and points and the database that you decided to use.
 9. You're done! There are three buttons on the frontend that exercise corresponding endpoints on the backend. They are listed below:
+
+# Installation and Setup from Local machine
+1. `cd /YOUR_REPO/frontend`
+2. `npm install`
+3. `npm start`
+4. Before interacting with the frontend, make sure the backend is up an running!! That means the express or spring and points and the database that you decided to use.
+5. You're done! There are three buttons on the frontend that exercise corresponding endpoints on the backend. They are listed below:
+
 # Buttons #
 1. Write Data to Database: This button will write whatever you input in the textbox to the database.
 2. Read Data from Database: This button will read whatever you have written to the database thus far.
